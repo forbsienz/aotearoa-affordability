@@ -26,7 +26,7 @@ export function AreaPicker({ areas }: { areas: AreaIndex[] }) {
   const places = tas.filter((a) => a.island === island && a.region_name === activeRegion);
 
   const selectClass =
-    "min-h-11 w-full rounded-lg border border-[var(--border)] bg-white px-3 text-base text-[var(--text-primary)]";
+    "min-h-11 w-full rounded-lg border border-[var(--border)] bg-[var(--cloud)] px-3 text-base text-[var(--ironsand)] focus:outline-none focus:ring-2 focus:ring-[var(--kowhai)]";
 
   return (
     <div className="space-y-3">

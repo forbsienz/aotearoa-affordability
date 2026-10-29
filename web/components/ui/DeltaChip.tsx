@@ -1,6 +1,13 @@
 import { formatPct } from "@/lib/format/metrics";
+import { deltaSentimentClass, type DeltaKind } from "@/lib/format/sentiment";
 
-export function DeltaChip({ value }: { value: number | null | undefined }) {
+export function DeltaChip({
+  value,
+  kind = "cost",
+}: {
+  value: number | null | undefined;
+  kind?: DeltaKind;
+}) {
   if (value == null || Number.isNaN(value)) {
     return (
       <span className="delta-flat inline-flex rounded-full px-2 py-0.5 text-xs font-semibold">
@@ -8,8 +15,7 @@ export function DeltaChip({ value }: { value: number | null | undefined }) {
       </span>
     );
   }
-  const cls =
-    Math.abs(value) < 0.5 ? "delta-flat" : value > 0 ? "delta-up" : "delta-down";
+  const cls = deltaSentimentClass(value, kind);
   return (
     <span className={`${cls} inline-flex rounded-full px-2 py-0.5 text-xs font-semibold`}>
       {formatPct(value)} YoY

@@ -23,3 +23,16 @@ There is **no application database** and **no user accounts**. Persistence is fi
 ## Integration contract
 
 Pipeline and UI share types in `web/lib/types/index.ts`. Each TA brief includes rent, earnings, inflation stack, housing (incl. illustrative mortgage), census income, commute modes, affordability ratios, and a deterministic hero narrative.
+
+## Brand colour system
+
+| Token | Hex | Role |
+| --- | --- | --- |
+| Pounamu | `#2A5C3F` | Primary / positive affordability & wage gains |
+| Tasman | `#1A365D` | Nav, structure, chart bars, borders |
+| Kōwhai | `#EAB308` | Hover, highlights, tight-margin warnings |
+| Ironsand | `#1F2937` | Body text & headings |
+| Cloud | `#F8FAFC` | Page background |
+| Rātā | `#DC2626` | Cost rises / stretched affordability |
+
+CSS variables live in `web/app/globals.css`. Sentiment helpers: `web/lib/format/sentiment.ts`.

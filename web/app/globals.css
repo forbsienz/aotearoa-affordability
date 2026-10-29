@@ -1,44 +1,64 @@
 @import "tailwindcss";
 
 :root {
-  /* Coastal slate — calm economic explainer, not crime-green or purple AI defaults */
-  --bg-page: #e8eef2;
-  --bg-card: #f7fafb;
-  --bg-card-muted: #dce5eb;
-  --bg-hero: #0f2a3a;
-  --bg-strip: #d2dde6;
+  /* Brand palette — Aotearoa Affordability */
+  --pounamu: #2a5c3f;
+  --pounamu-hover: #234d35;
+  --tasman: #1a365d;
+  --kowhai: #eab308;
+  --kowhai-deep: #ca8a04;
+  --ironsand: #1f2937;
+  --cloud: #f8fafc;
+  --rata: #dc2626;
 
-  --text-primary: #15252f;
-  --text-muted: #4d6270;
-  --text-on-dark: #e8eef2;
-  --text-on-dark-muted: #9db0bd;
+  --bg-page: var(--cloud);
+  --bg-card: #ffffff;
+  --bg-card-muted: #eef2f6;
+  --bg-hero: var(--tasman);
+  --bg-strip: #eef2f6;
 
-  --border: #c2d0da;
-  --accent: #1a6b75;
-  --accent-hover: #14555d;
-  --accent-warm: #b85c38;
+  --text-primary: var(--ironsand);
+  --text-muted: #4b5563;
+  --text-on-dark: var(--cloud);
+  --text-on-dark-muted: #cbd5e1;
 
-  --header-bg: #0f2a3a;
-  --header-text: #e8eef2;
-  --header-text-muted: #9db0bd;
-  --header-border: #1c3d4f;
+  --border: #cbd5e1;
+  --accent: var(--pounamu);
+  --accent-hover: var(--pounamu-hover);
+  --accent-secondary: var(--tasman);
+  --accent-warn: var(--kowhai);
+  --accent-alert: var(--rata);
 
-  --trend-up: #b85c38;
-  --trend-up-bg: #f3e6df;
-  --trend-down: #1a6b75;
-  --trend-down-bg: #d7ecee;
-  --trend-flat-bg: #dce5eb;
+  --header-bg: var(--tasman);
+  --header-text: var(--cloud);
+  --header-text-muted: #94a3b8;
+  --header-border: #243b5c;
 
-  --confidence-high-bg: #d7ecee;
-  --confidence-high-text: #14555d;
-  --confidence-medium-bg: #f3e6df;
-  --confidence-medium-text: #8a4528;
-  --confidence-low-bg: #dce5eb;
-  --confidence-low-text: #4d6270;
+  /* Cost-of-living semantics: up in costs = alert; down in costs / up in wages = positive */
+  --trend-positive: var(--pounamu);
+  --trend-positive-bg: #e8f0eb;
+  --trend-negative: var(--rata);
+  --trend-negative-bg: #fee2e2;
+  --trend-warn: var(--kowhai-deep);
+  --trend-warn-bg: #fef9c3;
+  --trend-flat-bg: #eef2f6;
+
+  /* Legacy aliases used by delta chips (mapped via sentiment helpers) */
+  --trend-up: var(--trend-negative);
+  --trend-up-bg: var(--trend-negative-bg);
+  --trend-down: var(--trend-positive);
+  --trend-down-bg: var(--trend-positive-bg);
+
+  --confidence-high-bg: var(--trend-positive-bg);
+  --confidence-high-text: var(--pounamu);
+  --confidence-medium-bg: var(--trend-warn-bg);
+  --confidence-medium-text: var(--kowhai-deep);
+  --confidence-low-bg: var(--bg-card-muted);
+  --confidence-low-text: var(--text-muted);
 
   --radius-card: 1rem;
   --radius-sub: 0.625rem;
-  --shadow-card: 0 4px 24px rgb(15 42 58 / 0.08);
+  --shadow-card: 0 4px 24px rgb(26 54 93 / 0.08);
 
   --foreground: var(--text-primary);
   --background: var(--bg-page);
@@ -48,8 +68,8 @@
 body {
   color: var(--text-primary);
   background:
-    radial-gradient(ellipse 120% 80% at 10% -20%, #c5dde8 0%, transparent 55%),
-    radial-gradient(ellipse 90% 60% at 100% 0%, #d5e4dc 0%, transparent 50%),
+    radial-gradient(ellipse 120% 80% at 8% -18%, color-mix(in srgb, var(--pounamu) 18%, white) 0%, transparent 55%),
+    radial-gradient(ellipse 90% 55% at 100% 0%, color-mix(in srgb, var(--tasman) 12%, white) 0%, transparent 50%),
     var(--bg-page);
   font-family: var(--font-body), "DM Sans", system-ui, sans-serif;
   line-height: 1.6;
@@ -75,6 +95,7 @@ h3 {
   font-family: var(--font-display), "Fraunces", Georgia, serif;
   letter-spacing: -0.02em;
   line-height: 1.2;
+  color: var(--ironsand);
 }
 
 .card {
@@ -92,23 +113,107 @@ h3 {
   font-weight: 600;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: var(--accent);
-  background: color-mix(in srgb, var(--accent) 12%, white);
+  color: var(--tasman);
+  background: color-mix(in srgb, var(--tasman) 10%, white);
+  border: 1px solid color-mix(in srgb, var(--tasman) 22%, white);
   border-radius: 999px;
   padding: 0.2rem 0.55rem;
 }
 
-.delta-up {
-  color: var(--trend-up);
-  background: var(--trend-up-bg);
+.btn-primary {
+  display: inline-flex;
+  min-height: 2.75rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.75rem;
+  background: var(--pounamu);
+  color: var(--cloud);
+  font-weight: 600;
+  padding: 0.5rem 1.1rem;
+  transition: background 0.15s ease, box-shadow 0.15s ease;
 }
 
-.delta-down {
-  color: var(--trend-down);
-  background: var(--trend-down-bg);
+.btn-primary:hover {
+  background: var(--pounamu-hover);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--kowhai) 45%, transparent);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  min-height: 2.75rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.75rem;
+  border: 1px solid var(--tasman);
+  background: transparent;
+  color: var(--tasman);
+  font-weight: 600;
+  padding: 0.5rem 1.1rem;
+}
+
+.btn-secondary:hover {
+  background: color-mix(in srgb, var(--kowhai) 22%, white);
+  border-color: var(--kowhai-deep);
+}
+
+.delta-positive {
+  color: var(--trend-positive);
+  background: var(--trend-positive-bg);
+}
+
+.delta-negative {
+  color: var(--trend-negative);
+  background: var(--trend-negative-bg);
+}
+
+.delta-warn {
+  color: var(--trend-warn);
+  background: var(--trend-warn-bg);
 }
 
 .delta-flat {
   color: var(--text-muted);
   background: var(--trend-flat-bg);
+}
+
+/* Back-compat class names */
+.delta-up {
+  color: var(--trend-negative);
+  background: var(--trend-negative-bg);
+}
+
+.delta-down {
+  color: var(--trend-positive);
+  background: var(--trend-positive-bg);
+}
+
+.pressure-good {
+  border-color: color-mix(in srgb, var(--pounamu) 35%, var(--border));
+  background: var(--trend-positive-bg);
+}
+
+.pressure-warn {
+  border-color: color-mix(in srgb, var(--kowhai) 55%, var(--border));
+  background: var(--trend-warn-bg);
+}
+
+.pressure-alert {
+  border-color: color-mix(in srgb, var(--rata) 40%, var(--border));
+  background: var(--trend-negative-bg);
+}
+
+.pressure-good .pressure-value {
+  color: var(--pounamu);
+}
+
+.pressure-warn .pressure-value {
+  color: var(--kowhai-deep);
+}
+
+.pressure-alert .pressure-value {
+  color: var(--rata);
+}
+
+.metric-highlight {
+  box-shadow: inset 0 0 0 2px color-mix(in srgb, var(--kowhai) 70%, transparent);
 }

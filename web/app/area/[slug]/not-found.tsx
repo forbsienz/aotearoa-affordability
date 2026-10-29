@@ -7,7 +7,7 @@ export default function AreaNotFound() {
       <p className="text-[var(--text-muted)]">
         That district brief is not in the current dataset. Try the home picker.
       </p>
-      <Link href="/" className="inline-flex min-h-11 items-center text-[var(--accent)] underline">
+      <Link href="/" className="btn-primary">
         Back home
       </Link>
     </div>

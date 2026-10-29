@@ -19,13 +19,13 @@ export function SiteHeader() {
         <nav className="flex shrink-0 items-center gap-1 text-sm">
           <Link
             href="/compare"
-            className="inline-flex min-h-11 items-center rounded-lg px-3 hover:bg-white/10"
+            className="inline-flex min-h-11 items-center rounded-lg px-3 hover:bg-[color-mix(in_srgb,var(--kowhai)_22%,transparent)] hover:text-[var(--kowhai)]"
           >
             Compare
           </Link>
           <Link
             href="/methodology"
-            className="inline-flex min-h-11 items-center rounded-lg px-3 hover:bg-white/10"
+            className="inline-flex min-h-11 items-center rounded-lg px-3 hover:bg-[color-mix(in_srgb,var(--kowhai)_22%,transparent)] hover:text-[var(--kowhai)]"
           >
             Method
           </Link>
@@ -45,10 +45,16 @@ export function SiteFooter() {
           government agency.
         </p>
         <div className="flex flex-wrap gap-4">
-          <Link href="/methodology" className="underline-offset-2 hover:underline">
+          <Link
+            href="/methodology"
+            className="text-[var(--tasman)] underline-offset-2 hover:text-[var(--pounamu)] hover:underline"
+          >
             Methodology
           </Link>
-          <Link href="/glossary" className="underline-offset-2 hover:underline">
+          <Link
+            href="/glossary"
+            className="text-[var(--tasman)] underline-offset-2 hover:text-[var(--pounamu)] hover:underline"
+          >
             Glossary
           </Link>
         </div>
