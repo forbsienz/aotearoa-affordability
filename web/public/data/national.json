@@ -1,0 +1,34 @@
+{
+  "cpi_all_groups": {
+    "value": 2.7,
+    "unit": "yoy_pct",
+    "geography": "national",
+    "geography_label": "New Zealand",
+    "period": "2025-Q3",
+    "source": "Stats NZ CPI",
+    "yoy_pct": 2.7,
+    "confidence": "medium"
+  },
+  "petrol": {
+    "value": -1.2,
+    "unit": "yoy_pct",
+    "geography": "national",
+    "geography_label": "New Zealand",
+    "period": "2025-09",
+    "source": "Stats NZ Selected Price Indexes",
+    "yoy_pct": -1.2,
+    "confidence": "medium"
+  },
+  "electricity": {
+    "value": 4.8,
+    "unit": "yoy_pct",
+    "geography": "national",
+    "geography_label": "New Zealand",
+    "period": "2025-09",
+    "source": "Stats NZ Selected Price Indexes",
+    "yoy_pct": 4.8,
+    "confidence": "medium"
+  },
+  "mortgage_floating_rate_pct": 5.85,
+  "mortgage_rate_period": "2025-09"
+}

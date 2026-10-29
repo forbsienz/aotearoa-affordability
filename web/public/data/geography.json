@@ -1,0 +1,79 @@
+{
+  "territorial_authorities": {
+    "wellington-city": {
+      "slug": "wellington-city",
+      "name": "Wellington City",
+      "region_slug": "wellington",
+      "island": "North Island",
+      "cpi_region": "Wellington",
+      "rent_weekly": 620.0,
+      "earnings_yoy_pct": 4.8
+    },
+    "palmerston-north-city": {
+      "slug": "palmerston-north-city",
+      "name": "Palmerston North City",
+      "region_slug": "manawatu-whanganui",
+      "island": "North Island",
+      "cpi_region": "Rest of North Island",
+      "rent_weekly": 480.0,
+      "earnings_yoy_pct": 3.8
+    },
+    "christchurch-city": {
+      "slug": "christchurch-city",
+      "name": "Christchurch City",
+      "region_slug": "canterbury",
+      "island": "South Island",
+      "cpi_region": "Canterbury",
+      "rent_weekly": 510.0,
+      "earnings_yoy_pct": 3.6
+    },
+    "auckland": {
+      "slug": "auckland",
+      "name": "Auckland",
+      "region_slug": "auckland",
+      "island": "North Island",
+      "cpi_region": "Auckland",
+      "rent_weekly": 680.0,
+      "earnings_yoy_pct": 3.3
+    }
+  },
+  "regions": {
+    "wellington": {
+      "slug": "wellington",
+      "name": "Wellington",
+      "island": "North Island"
+    },
+    "manawatu-whanganui": {
+      "slug": "manawatu-whanganui",
+      "name": "Manawat\u016b-Whanganui",
+      "island": "North Island"
+    },
+    "canterbury": {
+      "slug": "canterbury",
+      "name": "Canterbury",
+      "island": "South Island"
+    },
+    "auckland": {
+      "slug": "auckland",
+      "name": "Auckland",
+      "island": "North Island"
+    }
+  },
+  "islands": {
+    "north-island": {
+      "slug": "north-island",
+      "name": "North Island"
+    },
+    "south-island": {
+      "slug": "south-island",
+      "name": "South Island"
+    }
+  },
+  "cpi_regions": [
+    "Auckland",
+    "Wellington",
+    "Rest of North Island",
+    "Canterbury",
+    "Rest of South Island"
+  ]
+}

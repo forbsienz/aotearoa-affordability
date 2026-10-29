@@ -1,0 +1,63 @@
+pipeline_version: "0.1.0"
+
+paths:
+  repo_root: ".."
+  raw: "../data/raw"
+  processed: "../data/processed"
+  web_data: "../web/public/data"
+
+confidence:
+  min_bond_count_for_rent: 20
+  min_population_for_ratio: 5000
+
+narrative:
+  max_hero_chars: 320
+
+# Territorial authorities included in fixture / pilot builds
+pilot_tas:
+  - slug: wellington-city
+    name: Wellington City
+    region_slug: wellington
+    region_name: Wellington
+    island: North Island
+    cpi_region: Wellington
+  - slug: palmerston-north-city
+    name: Palmerston North City
+    region_slug: manawatu-whanganui
+    region_name: Manawatū-Whanganui
+    island: North Island
+    cpi_region: Rest of North Island
+  - slug: christchurch-city
+    name: Christchurch City
+    region_slug: canterbury
+    region_name: Canterbury
+    island: South Island
+    cpi_region: Canterbury
+  - slug: auckland
+    name: Auckland
+    region_slug: auckland
+    region_name: Auckland
+    island: North Island
+    cpi_region: Auckland
+
+# Map TA → Stats NZ five broad CPI regions
+cpi_regions:
+  - Auckland
+  - Wellington
+  - Rest of North Island
+  - Canterbury
+  - Rest of South Island
+
+download:
+  # Operator places monthly bond CSV here (or fixtures generate it)
+  mbie_bond_ta_glob: "mbie/rental_bond_ta*.csv"
+  # HUD MCERT HPI workbook when downloaded
+  hud_hpi_glob: "hud/mcert_hpi*"
+  rbnz_mortgage_csv: "rbnz/mortgage_floating.csv"
+  stats_cpi_csv: "stats_nz/cpi_all_groups.csv"
+  stats_rpi_csv: "stats_nz/rpi_flow_regions.csv"
+  stats_fpi_csv: "stats_nz/fpi_regions.csv"
+  stats_spi_csv: "stats_nz/spi_selected.csv"
+  stats_leed_csv: "stats_nz/leed_ta_earnings.csv"
+  stats_census_income_csv: "stats_nz/census_2023_income_ta.csv"
+  stats_commute_csv: "stats_nz/census_2023_commute_ta.csv"

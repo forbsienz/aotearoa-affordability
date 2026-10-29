@@ -1,0 +1,180 @@
+{
+  "slug": "christchurch-city",
+  "display_name": "Christchurch City",
+  "grain": "ta",
+  "geography": {
+    "ta_slug": "christchurch-city",
+    "ta_name": "Christchurch City",
+    "region_slug": "canterbury",
+    "region_name": "Canterbury",
+    "island": "South Island",
+    "cpi_region": "Canterbury",
+    "population": 390000
+  },
+  "ratio_comparison_reliable": true,
+  "rent": {
+    "value": 510.0,
+    "unit": "nzd_per_week",
+    "geography": "ta",
+    "geography_label": "Christchurch City",
+    "period": "2025-09",
+    "source": "MBIE Tenancy Services rental bond data",
+    "yoy_pct": 4.1,
+    "confidence": "high",
+    "note": "Typical new tenancy rent (geometric mean), not all tenants.",
+    "bond_count": 520,
+    "geometric_mean_weekly": 510.0
+  },
+  "earnings": {
+    "value": 17100.0,
+    "unit": "nzd_per_quarter",
+    "geography": "ta",
+    "geography_label": "Christchurch City",
+    "period": "2025-Q2",
+    "source": "Stats NZ LEED (workplace)",
+    "yoy_pct": 3.6,
+    "confidence": "medium",
+    "note": "Median earnings for continuing jobs based in this district \u2014 not resident pay.",
+    "approx_weekly": 1315.0,
+    "median_quarterly_earnings": 17100.0
+  },
+  "inflation": {
+    "cpi_national": {
+      "value": 2.7,
+      "unit": "yoy_pct",
+      "geography": "national",
+      "geography_label": "New Zealand",
+      "period": "2025-Q3",
+      "source": "Stats NZ CPI",
+      "yoy_pct": 2.7,
+      "confidence": "medium"
+    },
+    "rent_rpi": {
+      "value": 2.5,
+      "unit": "yoy_pct",
+      "geography": "cpi_region",
+      "geography_label": "Canterbury",
+      "period": "2025-09",
+      "source": "Stats NZ Rental Price Index (flow)",
+      "yoy_pct": 2.5,
+      "confidence": "medium",
+      "note": "Regional rent price trend \u2014 not suburb-level inflation."
+    },
+    "food": {
+      "value": 2.2,
+      "unit": "yoy_pct",
+      "geography": "cpi_region",
+      "geography_label": "Canterbury",
+      "period": "2025-09",
+      "source": "Stats NZ Food Price Index",
+      "yoy_pct": 2.2,
+      "confidence": "medium"
+    },
+    "petrol": {
+      "value": -1.2,
+      "unit": "yoy_pct",
+      "geography": "national",
+      "geography_label": "New Zealand",
+      "period": "2025-09",
+      "source": "Stats NZ Selected Price Indexes",
+      "yoy_pct": -1.2,
+      "confidence": "medium"
+    },
+    "electricity": {
+      "value": 4.8,
+      "unit": "yoy_pct",
+      "geography": "national",
+      "geography_label": "New Zealand",
+      "period": "2025-09",
+      "source": "Stats NZ Selected Price Indexes",
+      "yoy_pct": 4.8,
+      "confidence": "medium"
+    }
+  },
+  "housing": {
+    "median_sale_price": {
+      "value": 690000.0,
+      "unit": "nzd",
+      "geography": "ta",
+      "geography_label": "Christchurch City",
+      "period": "2025-08",
+      "source": "HUD MCERT / Property and sales statistics",
+      "yoy_pct": 1.2,
+      "confidence": "medium"
+    },
+    "hpi_yoy_pct": 1.2,
+    "illustrative_mortgage_weekly": {
+      "value": 621.0,
+      "unit": "nzd_per_week",
+      "geography": "ta",
+      "geography_label": "Christchurch City",
+      "period": "2025-09",
+      "source": "Illustration: 80% LVR \u00d7 RBNZ floating rate \u00d7 local median sale",
+      "yoy_pct": null,
+      "confidence": "low",
+      "note": "Not a personalised lending quote. Interest-only illustration only.",
+      "floating_rate_pct": 5.85,
+      "assumed_lvr": 0.8
+    }
+  },
+  "census_income": {
+    "median_personal_income": {
+      "value": 51000.0,
+      "unit": "nzd_per_year",
+      "geography": "ta",
+      "geography_label": "Christchurch City",
+      "period": "2023 Census",
+      "source": "Stats NZ 2023 Census",
+      "yoy_pct": null,
+      "confidence": "medium",
+      "note": "Resident income baseline \u2014 updated after the next census."
+    },
+    "median_household_income": {
+      "value": 99000.0,
+      "unit": "nzd_per_year",
+      "geography": "ta",
+      "geography_label": "Christchurch City",
+      "period": "2023 Census",
+      "source": "Stats NZ 2023 Census",
+      "yoy_pct": null,
+      "confidence": "medium"
+    },
+    "median_rent_paid_weekly": {
+      "value": 430.0,
+      "unit": "nzd_per_week",
+      "geography": "ta",
+      "geography_label": "Christchurch City",
+      "period": "2023 Census",
+      "source": "Stats NZ 2023 Census",
+      "yoy_pct": null,
+      "confidence": "medium",
+      "note": "Existing tenants' rent paid \u2014 differs from new-bond market rent."
+    }
+  },
+  "commute": {
+    "geography": "ta",
+    "geography_label": "Christchurch City",
+    "period": "2023 Census",
+    "source": "Stats NZ 2023 Census main means of travel to work",
+    "modes_pct": {
+      "drive": 68.0,
+      "public_transport": 6.0,
+      "walk_or_cycle": 12.0,
+      "work_from_home": 10.0,
+      "other": 4.0
+    },
+    "note": "Mode share for people who lived and worked in this area context \u2014 not door-to-door travel times."
+  },
+  "affordability": {
+    "rent_as_pct_of_approx_weekly_earnings": 38.8,
+    "illustrative_mortgage_as_pct_of_approx_weekly_earnings": 47.2,
+    "note": "Ratios use workplace LEED earnings approximated to weekly. Interpret cautiously."
+  },
+  "vs_national": {
+    "rent_ratio": 0.89,
+    "earnings_growth_vs_cpi": 0.9
+  },
+  "comparison_narrative": {
+    "hero": "In Christchurch City, typical new tenancy rent is about $510/week (+4.1% year on year). Workplace median earnings moved +3.6% over the same kind of period, while food prices in Canterbury were +2.2% year on year."
+  }
+}
